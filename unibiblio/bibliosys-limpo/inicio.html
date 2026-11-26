@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Início - UniBiblio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <nav class="side">
+    <div class="brand">UniBiblio</div>
+    <a href="inicio.html" class="on">Início</a>
+    <a href="alunos.html">Alunos</a>
+    <a href="livros.html">Livros e exemplares</a>
+    <a href="emprestimos.html">Empréstimos</a>
+    <a href="devolucoes.html">Devoluções</a>
+    <a href="multas.html">Multas e pagamentos</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="relatorios.html">Relatórios gerenciais</a>
+    <a class="out" href="index.html">Sair</a>
+  </nav>
+  <main class="main">
+    <div class="top"><h1>Início</h1><span class="role">Perfil: Administrador / Bibliotecário</span></div>
+    <div class="g5">
+      <a class="card kpi" href="livros.html"><span>Livros cadastrados</span><b>0</b></a>
+      <a class="card kpi" href="livros.html"><span>Exemplares disponíveis</span><b>0</b></a>
+      <a class="card kpi" href="emprestimos.html"><span>Empréstimos ativos</span><b>0</b></a>
+      <a class="card kpi" href="devolucoes.html"><span>Devoluções atrasadas</span><b>0</b></a>
+      <a class="card kpi" href="multas.html"><span>Multas pendentes</span><b>R$ 0,00</b></a>
+    </div>
+    <div class="g2">
+      <div class="card">
+        <h3>Alertas</h3>
+        <!-- alertas inseridos a partir do banco de dados -->
+      </div>
+      <div class="card">
+        <h3>Acesso rápido</h3>
+        <div class="qa">
+          <a class="btn s" href="alunos.html">Alunos</a>
+          <a class="btn s" href="livros.html">Livros e exemplares</a>
+          <a class="btn s" href="emprestimos.html">Empréstimos</a>
+          <a class="btn s" href="devolucoes.html">Devoluções</a>
+          <a class="btn s" href="multas.html">Multas e pagamentos</a>
+          <a class="btn s" href="reservas.html">Reservas</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

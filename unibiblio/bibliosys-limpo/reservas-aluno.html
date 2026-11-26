@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Reservas - UniBiblio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <nav class="side">
+    <div class="brand">UniBiblio</div>
+    <a href="minha-area.html">Minha área</a>
+    <a href="reservas-aluno.html" class="on">Reservas</a>
+    <a class="out" href="index.html">Sair</a>
+  </nav>
+  <main class="main">
+    <div class="top"><h1>Reservas</h1><span class="role">Perfil: Aluno</span></div>
+    <div class="card">
+      <h3>Nova reserva</h3>
+      <label>Livro reservado</label>
+      <select id="rb"><option value="">Selecione o livro</option><!-- livros carregados do banco de dados --></select>
+      <div class="row">
+        <div><label>Data da reserva</label><input disabled id="rs-data"></div>
+        <div><label>Status da reserva</label><input disabled value="Aguardando exemplar"></div>
+      </div>
+      <div class="row">
+        <div><label>Nome do aluno</label><input disabled id="rs-aluno"></div>
+        <div><label>Matrícula</label><input disabled id="rs-matricula"></div>
+      </div>
+      <div class="qa" style="margin-top:14px">
+        <button class="btn" onclick="aviso('Reserva solicitada')">Solicitar reserva</button>
+        <a class="btn s" href="minha-area.html">Voltar ao catálogo</a>
+      </div>
+      <p class="mu">Reservas só são permitidas quando todos os exemplares estão emprestados.</p>
+    </div>
+    <div class="card">
+      <h3>Reservas realizadas</h3>
+  <div class="tw"><table id="rr">
+    <thead><tr><th>Livro</th><th>Data</th><th>Status</th></tr></thead>
+    <tbody>
+      <!-- registros inseridos a partir do banco de dados -->
+    </tbody>
+  </table></div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

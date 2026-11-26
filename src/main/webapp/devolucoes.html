@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Devoluções - UniBiblio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <nav class="side">
+    <div class="brand">UniBiblio</div>
+    <a href="inicio.html">Início</a>
+    <a href="alunos.html">Alunos</a>
+    <a href="livros.html">Livros e exemplares</a>
+    <a href="emprestimos.html">Empréstimos</a>
+    <a href="devolucoes.html" class="on">Devoluções</a>
+    <a href="multas.html">Multas e pagamentos</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="relatorios.html">Relatórios gerenciais</a>
+    <a class="out" href="index.html">Sair</a>
+  </nav>
+  <main class="main">
+    <div class="top"><h1>Devoluções</h1><span class="role">Perfil: Administrador / Bibliotecário</span></div>
+    <div class="card">
+      <input placeholder="Pesquisar empréstimo ou código de barras" oninput="filtrar(this,'td')">
+  <div class="tw"><table id="td">
+    <thead><tr><th>Aluno</th><th>Livro</th><th>Empréstimo</th><th>Prevista</th><th>Situação</th><th></th></tr></thead>
+    <tbody>
+      <!-- registros inseridos a partir do banco de dados -->
+    </tbody>
+  </table></div>
+    </div>
+    <div class="card">
+      <h3>Registrar devolução</h3>
+      <div class="g2">
+        <div>
+          <label>Nome do aluno</label><input disabled id="dv-aluno">
+          <label>Livro emprestado</label><input disabled id="dv-livro">
+          <div class="row">
+            <div><label>Data do empréstimo</label><input disabled id="dv-emp"></div>
+            <div><label>Data prevista</label><input disabled id="dv-prev"></div>
+          </div>
+          <label>Data efetiva da devolução</label><input disabled id="dv-efet">
+        </div>
+        <div class="mini">
+          <h3>Resultado automático</h3>
+          <div class="vr">Atraso: <b>—</b></div>
+          <div class="vr">Status: <b>—</b></div>
+          <div class="vr">Exemplar: <b>—</b></div>
+          <div class="vr">Multa: <b>—</b></div>
+        </div>
+      </div>
+      <div class="qa" style="margin-top:14px">
+        <button class="btn" onclick="aviso('Devolução registrada.')">Confirmar devolução</button>
+        <button class="btn s" onclick="aviso('Comprovante de devolução gerado')">Imprimir comprovante de devolução</button>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Alunos - UniBiblio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <nav class="side">
+    <div class="brand">UniBiblio</div>
+    <a href="inicio.html">Início</a>
+    <a href="alunos.html" class="on">Alunos</a>
+    <a href="livros.html">Livros e exemplares</a>
+    <a href="emprestimos.html">Empréstimos</a>
+    <a href="devolucoes.html">Devoluções</a>
+    <a href="multas.html">Multas e pagamentos</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="relatorios.html">Relatórios gerenciais</a>
+    <a class="out" href="index.html">Sair</a>
+  </nav>
+  <main class="main">
+    <div class="top"><h1>Alunos</h1><span class="role">Perfil: Administrador / Bibliotecário</span></div>
+    <div class="bar">
+      <input placeholder="Pesquisar por nome ou matrícula" oninput="filtrar(this,'ta')">
+      <button class="btn" onclick="aviso('Preencha o formulário abaixo')">Cadastrar novo aluno</button>
+    </div>
+    <div class="card">
+  <div class="tw"><table id="ta">
+    <thead><tr><th>Nome</th><th>Matrícula</th><th>Curso</th><th>E-mail</th><th>Situação</th><th>Ações</th></tr></thead>
+    <tbody>
+      <!-- registros inseridos a partir do banco de dados -->
+    </tbody>
+  </table></div>
+    </div>
+    <div class="g2">
+      <div class="card">
+        <h3>Cadastrar aluno</h3>
+        <label>Nome</label><input id="fn">
+        <label>Matrícula</label><input id="fm">
+        <label>Curso</label><input id="fc">
+        <label>E-mail</label><input id="fe">
+        <label>Endereço</label><input id="fa">
+        <div class="qa" style="margin-top:14px">
+          <button class="btn" onclick="aviso('Aluno salvo')">Cadastrar</button>
+          <button class="btn s" onclick="aviso('Cancelado')">Cancelar</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Situação do aluno</h3>
+        <div class="g3">
+          <div class="mini">Empréstimos ativos<br><b>0</b></div>
+          <div class="mini">Empréstimos atrasados<br><b>0</b></div>
+          <div class="mini">Multas pendentes<br><b>R$ 0,00</b></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

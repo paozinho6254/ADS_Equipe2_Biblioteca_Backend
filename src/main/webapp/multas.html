@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Multas e pagamentos - UniBiblio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <nav class="side">
+    <div class="brand">UniBiblio</div>
+    <a href="inicio.html">Início</a>
+    <a href="alunos.html">Alunos</a>
+    <a href="livros.html">Livros e exemplares</a>
+    <a href="emprestimos.html">Empréstimos</a>
+    <a href="devolucoes.html">Devoluções</a>
+    <a href="multas.html" class="on">Multas e pagamentos</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="relatorios.html">Relatórios gerenciais</a>
+    <a class="out" href="index.html">Sair</a>
+  </nav>
+  <main class="main">
+    <div class="top"><h1>Multas e pagamentos</h1><span class="role">Perfil: Administrador / Bibliotecário</span></div>
+    <div class="qa" id="filtros" style="margin-bottom:16px">
+      <button class="btn" data-f="Todas" onclick="filtrarMultas('Todas')">Todas</button>
+      <button class="btn s" data-f="Pendente" onclick="filtrarMultas('Pendente')">Pendentes</button>
+      <button class="btn s" data-f="Paga" onclick="filtrarMultas('Paga')">Pagas</button>
+    </div>
+    <div class="card">
+  <div class="tw"><table id="tm">
+    <thead><tr><th>Aluno</th><th>Livro</th><th>Dias de atraso</th><th>Valor (R$ 2,00/dia)</th><th>Status</th><th></th></tr></thead>
+    <tbody>
+      <!-- registros inseridos a partir do banco de dados -->
+    </tbody>
+  </table></div>
+    </div>
+    <div class="g2">
+      <div class="card">
+        <h3>Registrar pagamento</h3>
+        <div class="mini" id="info-multa"><b>—</b></div>
+        <label>Modalidade de pagamento</label>
+        <select id="pm"><option>PIX</option><option>Dinheiro</option></select>
+        <label>Valor pago (R$)</label>
+        <input id="pv" type="number" step="0.01" min="0">
+        <button class="btn" style="margin-top:14px" onclick="aviso('Pagamento registrado. Multa: Paga')">Registrar pagamento</button>
+      </div>
+      <div class="card">
+        <h3>Histórico de pagamentos</h3>
+    <div class="tw"><table id="th">
+    <thead><tr><th>Data</th><th>Aluno</th><th>Modalidade</th><th>Valor pago</th></tr></thead>
+    <tbody>
+      <!-- registros inseridos a partir do banco de dados -->
+    </tbody>
+  </table></div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

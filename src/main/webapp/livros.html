@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Livros e exemplares - UniBiblio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <nav class="side">
+    <div class="brand">UniBiblio</div>
+    <a href="inicio.html">Início</a>
+    <a href="alunos.html">Alunos</a>
+    <a href="livros.html" class="on">Livros e exemplares</a>
+    <a href="emprestimos.html">Empréstimos</a>
+    <a href="devolucoes.html">Devoluções</a>
+    <a href="multas.html">Multas e pagamentos</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="relatorios.html">Relatórios gerenciais</a>
+    <a class="out" href="index.html">Sair</a>
+  </nav>
+  <main class="main">
+    <div class="top"><h1>Livros e exemplares</h1><span class="role">Perfil: Administrador / Bibliotecário</span></div>
+    <div class="g2">
+      <div class="card">
+        <h3>Cadastro do livro</h3>
+        <label>Título</label><input id="bt">
+        <label>ISBN</label><input id="bi">
+        <label>Autor principal</label><input id="ba">
+        <label>Ano de publicação</label><input id="by" type="number">
+        <div class="qa" style="margin-top:14px">
+          <button class="btn" onclick="aviso('Livro cadastrado')">Cadastrar livro</button>
+          <button class="btn s" onclick="aviso('Informações atualizadas')">Atualizar informações</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Cadastro de exemplares</h3>
+        <label>Código de barras</label><input id="xc" placeholder="Código de barras do exemplar">
+        <label>Livro relacionado</label><select id="xb"><option value="">Selecione o livro</option><!-- opções carregadas do banco de dados --></select>
+        <div class="row">
+          <div><label>Quantidade de exemplares</label><input id="xq" type="number" value="1" min="1"></div>
+          <div><label>Status</label><select id="xs"><option>Disponível</option><option>Emprestado</option><option>Danificado</option><option>Perdido</option></select></div>
+        </div>
+        <button class="btn" style="margin-top:14px" onclick="aviso('Exemplar(es) adicionado(s)')">Adicionar exemplares</button>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Catálogo</h3>
+      <input placeholder="Pesquisar por título, autor ou ISBN" oninput="filtrar(this,'tl')">
+  <div class="tw"><table id="tl">
+    <thead><tr><th>Título</th><th>Autor</th><th>ISBN</th><th>Disponibilidade</th><th></th></tr></thead>
+    <tbody>
+      <!-- registros inseridos a partir do banco de dados -->
+    </tbody>
+  </table></div>
+    </div>
+    <div class="card">
+      <h3>Exemplares do livro selecionado</h3>
+  <div class="tw"><table id="tx">
+    <thead><tr><th>Código de barras</th><th>Status</th><th>Ação</th></tr></thead>
+    <tbody>
+      <!-- registros inseridos a partir do banco de dados -->
+    </tbody>
+  </table></div>
+    </div>
+    <button class="btn" onclick="aviso('Cadastro salvo no banco de dados')">Salvar no banco de dados</button>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

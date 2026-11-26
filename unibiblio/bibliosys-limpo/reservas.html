@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Reservas - UniBiblio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <nav class="side">
+    <div class="brand">UniBiblio</div>
+    <a href="inicio.html">Início</a>
+    <a href="alunos.html">Alunos</a>
+    <a href="livros.html">Livros e exemplares</a>
+    <a href="emprestimos.html">Empréstimos</a>
+    <a href="devolucoes.html">Devoluções</a>
+    <a href="multas.html">Multas e pagamentos</a>
+    <a href="reservas.html" class="on">Reservas</a>
+    <a href="relatorios.html">Relatórios gerenciais</a>
+    <a class="out" href="index.html">Sair</a>
+  </nav>
+  <main class="main">
+    <div class="top"><h1>Reservas</h1><span class="role">Perfil: Administrador / Bibliotecário</span></div>
+    <div class="card">
+  <div class="tw"><table id="rl">
+    <thead><tr><th>Livro</th><th>Aluno</th><th>Matrícula</th><th>Data da reserva</th><th>Status</th><th></th></tr></thead>
+    <tbody>
+      <!-- registros inseridos a partir do banco de dados -->
+    </tbody>
+  </table></div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

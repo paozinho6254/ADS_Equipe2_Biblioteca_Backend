@@ -1,10 +1,8 @@
 package model.enums;
 
 public enum StatusReserva {
-    // Em espera
-    ATIVA, 
-    // Foi entregue para aquele da fila
+    ATIVA,
     ATENDIDA,
-    // FOi cancelado antes de pegar o livro
+    EXPIRADA,
     CANCELADA
 }

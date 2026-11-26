@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Empréstimos - UniBiblio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <nav class="side">
+    <div class="brand">UniBiblio</div>
+    <a href="inicio.html">Início</a>
+    <a href="alunos.html">Alunos</a>
+    <a href="livros.html">Livros e exemplares</a>
+    <a href="emprestimos.html" class="on">Empréstimos</a>
+    <a href="devolucoes.html">Devoluções</a>
+    <a href="multas.html">Multas e pagamentos</a>
+    <a href="reservas.html">Reservas</a>
+    <a href="relatorios.html">Relatórios gerenciais</a>
+    <a class="out" href="index.html">Sair</a>
+  </nav>
+  <main class="main">
+    <div class="top"><h1>Empréstimos</h1><span class="role">Perfil: Administrador / Bibliotecário</span></div>
+    <div class="g2">
+      <div class="card">
+        <label>Matrícula do aluno</label>
+        <div class="row"><input id="lm" placeholder="Matrícula do aluno"><button class="btn s" onclick="aviso('Aluno localizado')">Localizar aluno</button></div>
+        <div class="mini" id="info-aluno"><b>—</b></div>
+        <label>Código de barras do exemplar</label>
+        <div class="row"><input id="lc" placeholder="Código de barras do exemplar"><button class="btn s" onclick="aviso('Exemplar identificado')">Identificar exemplar</button></div>
+        <div class="mini" id="info-exemplar"><b>—</b></div>
+        <div class="row">
+          <div><label>Data de início</label><input disabled id="dt-inicio"></div>
+          <div><label>Data prevista de devolução (7 dias)</label><input disabled id="dt-prevista"></div>
+        </div>
+        <button class="btn" style="margin-top:14px" onclick="aviso('Empréstimo registrado. Exemplar agora: Emprestado')">Registrar empréstimo</button>
+              </div>
+      <div class="card">
+        <h3>Validações automáticas</h3>
+        <div class="vr"><span class="b">–</span> Aluno localizado</div><div class="vr"><span class="b">–</span> Exemplar disponível</div><div class="vr"><span class="b">–</span> Sem empréstimos atrasados</div><div class="vr"><span class="b">–</span> Sem multas pendentes</div>
+      </div>
+    </div>
+  </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
